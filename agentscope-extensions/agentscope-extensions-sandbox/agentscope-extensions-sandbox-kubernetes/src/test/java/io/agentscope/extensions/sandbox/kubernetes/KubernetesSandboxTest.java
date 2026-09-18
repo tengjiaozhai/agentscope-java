@@ -185,7 +185,6 @@ class KubernetesSandboxTest {
     @Test
     void supportsFileTransferOnlyUnderFileApiBaseDir() {
         assertTrue(sandbox.supportsFileTransfer("/workspace/src/Foo.java"));
-        assertTrue(!sandbox.supportsFileTransfer("/workspace".equals("/workspace") && false));
         assertTrue(!sandbox.supportsFileTransfer("/etc/passwd"));
         assertTrue(!sandbox.supportsFileTransfer("/workspace"));
         assertTrue(!sandbox.supportsFileTransfer("/workspace/../etc/passwd"));
